@@ -1,8 +1,10 @@
+org: hapuser
+app: sls-canary-example
 service: sls-canary-example
 
 provider:
   name: aws
-  runtime: nodejs6.10
+  runtime: nodejs12.x
   iamRoleStatements:
     - Effect: Allow
       Action:
