@@ -1,7 +1,7 @@
 const aws = require('aws-sdk');
 const codedeploy = new aws.CodeDeploy({apiVersion: '2014-10-06'});
-import * as path from 'path';
-import { runCLI } from 'jest';
+const path = require('path');
+const { runCLI } = require('jest');
 
 module.exports.pre = (event, context, callback) => {
   var deploymentId = event.DeploymentId;
