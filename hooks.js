@@ -3,7 +3,7 @@ const codedeploy = new aws.CodeDeploy({apiVersion: '2014-10-06'});
 const path = require('path');
 const { runCLI } = require('jest');
 
-module.exports.pre = (event, context, callback) => {
+module.exports.pre = async (event, context, callback) => {
   var deploymentId = event.DeploymentId;
   var lifecycleEventHookExecutionId = event.LifecycleEventHookExecutionId;
 
